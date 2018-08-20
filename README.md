@@ -9,7 +9,7 @@ Se utiliza [IPMI](https://en.wikipedia.org/wiki/Intelligent_Platform_Management_
 
 Omeobot es una herramienta que ayuda con el monitoreo del clúster Ometéotl cuyas notificaciones son útiles para llevar a cabo una revisión a detalle en el clúster y así obtener un diagnóstico con el fin de prevenir situaciones de riesgo en él.
 
-### Funcionalidad
+### Descripción del bot
 
 Por el momento el bot esta desarrollado para que realice el monitoreo de la temperatura de cada uno de los nodos y envía una alerta en caso de que la temperatura sea mayor a una temperatura considerada de _precaución_, las consultas están programadas para que se realicen cada 5 minutos.
 Aún no se implementan comandos para realizar consultas al bot.
