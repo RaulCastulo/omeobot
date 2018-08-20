@@ -2,7 +2,7 @@
 
 Es un bot diseñado para entregar alertas del clúster Ometéotl del CCA-UNAM, fue desarrollado utilizando una API de Python: [Telebot](https://github.com/eternnoir/pyTelegramBotAPI), y las alertas son recibidas por medio de la aplicación de mensajeria [Telegram](https://es.wikipedia.org/wiki/Telegram_Messenger)
 
-Se implementó utilizando el lenguaje de programación [Python](https://www.python.org/), la versión 3.6.
+Se implementó utilizando el lenguaje de programación [Python](https://www.python.org/), la versión 3.6.  
 Se utiliza [IPMI](https://en.wikipedia.org/wiki/Intelligent_Platform_Management_Interface) para recabar información de los nodos del clúster.
 
 ### Objetivos 
