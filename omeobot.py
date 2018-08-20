@@ -19,8 +19,8 @@ def consulta_temperaturas_kraken():
     temp_warning = 45
     temp_critical = 50
 	
-    system_temp = subprocess.getoutput("ssh chacmol clush -w kraken ipmi-sensors -t temperature | grep \"System Temp\" | awk \'{print $9}\'")
-    peripheral_temp = subprocess.getoutput("ssh chacmol clush -w kraken ipmi-sensors -t temperature | grep \"Peripheral Temp\" | awk \'{print $9}\'")
+    system_temp = subprocess.getoutput("clush -w kraken ipmi-sensors -t temperature | grep \"System Temp\" | awk \'{print $9}\'")
+    peripheral_temp = subprocess.getoutput("clush -w kraken ipmi-sensors -t temperature | grep \"Peripheral Temp\" | awk \'{print $9}\'")
 	
     kraken_system_temp = int(system_temp.rstrip("00").rstrip("."))
     kraken_peripheral_temp = int(peripheral_temp.rstrip("00").rstrip("."))
@@ -60,7 +60,7 @@ def consulta_temperaturas_nodos(node_list, node_name):
         temp_warning = 60
         temp_critical = 65
 	
-    consulta_system_temp = subprocess.getoutput("ssh chacmol clush -w " + node_list + " ipmi-sensors -t temperature | grep \"System Temp\" | awk \'{print $1,$9}\'")
+    consulta_system_temp = subprocess.getoutput("clush -w " + node_list + " ipmi-sensors -t temperature | grep \"System Temp\" | awk \'{print $1,$9}\'")
     lista_auxiliar_system_temp = consulta_system_temp.splitlines()
     datos_system_temp=[]
 
@@ -72,7 +72,7 @@ def consulta_temperaturas_nodos(node_list, node_name):
 
     datos_system_temp.sort(key=itemgetter(0))
 
-    consulta_peripheral_temp = subprocess.getoutput("ssh chacmol clush -w " + node_list + " ipmi-sensors -t temperature | grep \"Peripheral Temp\" | awk \'{print $1,$9}\'")
+    consulta_peripheral_temp = subprocess.getoutput("clush -w " + node_list + " ipmi-sensors -t temperature | grep \"Peripheral Temp\" | awk \'{print $1,$9}\'")
     lista_auxiliar_peripheral_temp = consulta_peripheral_temp.splitlines()
     datos_peripheral_temp=[]
 
