@@ -1,3 +1,4 @@
+#!/opt/miniconda3/bin/python3
 import telebot
 import time
 import os
