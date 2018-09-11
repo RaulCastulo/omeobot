@@ -57,8 +57,8 @@ def consulta_temperaturas_nodos(node_list, node_name):
         temp_warning = 45
         temp_critical = 50
     else:
-        temp_warning = 60
-        temp_critical = 65
+        temp_warning = 65
+        temp_critical = 68
 	
     consulta_system_temp = subprocess.getoutput("clush -w " + node_list + " ipmi-sensors -t temperature | grep \"System Temp\" | awk \'{print $1,$9}\'")
     lista_auxiliar_system_temp = consulta_system_temp.splitlines()
